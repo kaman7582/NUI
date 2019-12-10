@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>it研习社-第一个Hello Vue程序</title>
+    </head>
+    <body>
+        <div id="app">
+            {{a}}
+        </div>
+        <script src="vue.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+            var data={a:1};
+            var app=new Vue({
+                el:'#app',
+                data:data
+            });
+            app.$watch('a',function(oldv,newv){console.log(oldv,newv)})
+            app.$data.a="test.."
+            
+        </script>
+    </body>
+</html>
